@@ -96,6 +96,7 @@
         h1 {
             font-size: 28px;
             margin-top: 0px;
+            text-align: center;
         }
 
         .row_span {
@@ -127,16 +128,23 @@
             display: flex;
         }
 
+        @media screen and (max-width:1023px) {
+            .inner {
+                padding: 20px;
+            }
+        }
+
+
         /* left  */
         .inner_left {
             flex: 25%;
             border-right: 2px solid gray;
-            padding: 15px;
+            padding: 0 15px;
         }
 
         .list_link {
             text-decoration: none;
-            padding-left: 30px;
+
         }
 
         .ul_list_link {
@@ -153,6 +161,7 @@
         .ul_list_link::before {
             content: ">";
             text-decoration: none;
+            padding: 5px;
 
         }
 
@@ -165,8 +174,9 @@
             background-color: #F7F7F7;
             padding: 5px;
             margin-right: 20px;
-            border-radius: 5px;
+            border-radius: 10px;
             text-decoration: none;
+
 
         }
 
@@ -180,12 +190,49 @@
         /* rright */
         .inner_right {
             flex: 75%;
-            /* background-color: #555555; */
-            padding: 15px;
+            padding: 0 30px;
+        }
+
+        /* NEW */
+        .new {}
+
+        .news_day {
+            font-weight: bold;
+        }
+
+        .news_title {}
+
+        h2 {
+            color: #001821;
+        }
+
+        .news_user {
+            border-top: #555555 1px solid;
+            border-bottom: #555555 1px solid;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+        }
+
+        .news_name {
+            flex: 1;
+            display: flex;
+
+        }
+
+        .avatar {
+            flex: 3
+        }
+
+        .name {
+            flex: 7;
         }
     </style>
     <link rel="stylesheet"
         href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik">
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
 </head>
 
 <body>
@@ -272,8 +319,34 @@
             </div>
             <!-- right column  -->
             <div class="inner_right">
+                <div class="news">
+                    <div class="news_day">
+                        <p>1 JUNE 2017</p>
+                    </div>
+                    <div class="news_title">
+                        <h2>A UX strategy for the Ultimate Product Launch</h2>
+                    </div>
+                    <div class="news_content">
+                        <p>Product teams working with low access to users and a long time to market, usually enterprise
+                            level services and the
+                            like, need to make the most of their time, to compensate for access to users.</p>
+                        <span>Read more...</span>
+                    </div>
+                    <div class="news_user">
+                        <div class="news_name">
+                            <div class="avatar">
 
+                            </div>
+                            <div class="name">
+
+                            </div>
+                        </div>
+                        <div class="news_name"> abc</div>
+                        <div class="news_name"> abc</div>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
         <section>
 
