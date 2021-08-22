@@ -22,8 +22,14 @@
         .header_box {
 
             width: 100vw;
-            height: 80px;
             display: flex;
+            margin: 10px 0;
+        }
+
+        @media screen and (max-width:767px) {
+            .header_box {
+                flex-direction: column;
+            }
         }
 
         .logo {
@@ -42,6 +48,17 @@
             flex: 6;
             display: flex;
         }
+
+        @media screen and (max-width:767px) {
+            nav {
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-content: space-around;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
 
         .nav_menu {
             flex: 1;
@@ -74,12 +91,33 @@
             border-radius: 5px;
         }
 
+        /* @media screen and (max-width:767px) {
+            .button_purchase {
+                padding: 3px 15px;
+            }
+        } */
+
         .button_purchase:hover {
             background-color: #72C02C;
             color: white;
         }
 
         /* body */
+        /* button setting */
+
+        .setting {
+            background-color: white;
+            height: 60px;
+            width: 70px;
+            text-align: left;
+            padding-top: 5px;
+            position: fixed;
+            top: 100px;
+            bottom: 100px;
+            right: 0px;
+        }
+
+
         /* banner */
         .banner {
             background-color: #F7F7F7;
@@ -105,7 +143,7 @@
 
         .span_banner {}
 
-        .span_banner>a {
+        a {
             text-decoration: none;
             color: gray;
             font-size: 13px;
@@ -113,7 +151,8 @@
             text-decoration: none;
         }
 
-        .span_banner>a:hover {
+
+        a:hover {
             color: #72C02C;
             text-decoration: none;
         }
@@ -134,6 +173,14 @@
             }
         }
 
+        @media screen and (max-width:767px) {
+            .inner {
+                display: flex;
+                flex-direction: column-reverse;
+
+            }
+        }
+
 
         /* left  */
         .inner_left {
@@ -141,6 +188,18 @@
             border-right: 2px solid gray;
             padding: 0 15px;
         }
+
+        @media screen and (max-width:767px) {
+            .inner_left {
+                border-right: 0px solid gray;
+
+            }
+        }
+
+        .link {
+            padding-bottom: 30px
+        }
+
 
         .list_link {
             text-decoration: none;
@@ -176,8 +235,50 @@
             margin-right: 20px;
             border-radius: 10px;
             text-decoration: none;
+        }
+
+        .pub {
+            border-top: #7B8484 1px solid;
+            border-bottom: #7B8484 1px solid;
+        }
+
+        .tags {
+            border-bottom: #7B8484 1px solid;
+        }
+
+        .publications {
+
+            padding-bottom: 30px;
+        }
+
+        .list_pub {
+            display: flex;
+
+        }
+
+        .avatar_pub {
+            flex: 2;
+            display: flex;
+            padding-top: 15px;
+            padding-right: 10px;
+
+        }
+
+        .avatar_pub>img {
+
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+        }
 
 
+        .name_pub {}
+
+        .text_pub {
+            padding: 0px;
+            display: flex;
+            cursor: pointer;
+            flex-wrap: wrap;
         }
 
         /* .ul_list_link:active {
@@ -194,7 +295,9 @@
         }
 
         /* NEW */
-        .new {}
+        .news {
+            padding-bottom: 40px;
+        }
 
         .news_day {
             font-weight: bold;
@@ -206,13 +309,31 @@
             color: #001821;
         }
 
+        .readmore {
+            padding: 20px 0;
+            color: #72C02C;
+        }
+
+        .readmore>a:hover {
+            text-decoration: underline;
+        }
+
         .news_user {
-            border-top: #555555 1px solid;
-            border-bottom: #555555 1px solid;
+            border-top: #DDDDDD 1px solid;
+            border-bottom: #DDDDDD 1px solid;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            padding: 20px 0;
 
+            margin: 20px 0;
+        }
+
+        @media screen and (max-width:767px) {
+            .news_user {
+                flex-direction: column;
+
+            }
         }
 
         .news_name {
@@ -222,11 +343,208 @@
         }
 
         .avatar {
-            flex: 3
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
+        .avatar>img {
+
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+        }
+
+
         .name {
-            flex: 7;
+            flex: 8;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        /* nav_page  */
+
+        .nav_page {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 20px 0;
+
+        }
+
+        @media screen and (max-width:479px) {
+            .nav_page {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .text {
+            flex: 1;
+            display: flex;
+            padding: 15px 15px;
+            cursor: pointer;
+        }
+
+
+        .text_end {
+            justify-content: flex-end;
+            text-align: center;
+        }
+
+        .text_start {
+            justify-content: flex-start;
+            text-align: center;
+
+        }
+
+        .previous {
+            background-color: white;
+            border: 1px solid;
+            margin: 1px 0p;
+            cursor: pointer;
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin-right: 5px;
+        }
+
+
+
+        .previous:hover {
+            border: 1px solid #72C02C;
+            color: #72C02C;
+        }
+
+        .tagsname {
+            background-color: #DDDDDD;
+            border: 0;
+            margin: 1px 0p;
+            cursor: pointer;
+            border-radius: 20px;
+            padding: 5px 15px;
+            margin: 5px;
+
+        }
+
+        .tagsname:hover {
+            background-color: #72C02C;
+            color: white;
+        }
+
+        .numbers {
+            flex: 1;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-content: center;
+            align-items: center;
+
+        }
+
+        .number_list {
+            background-color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .number_list:hover {
+            cursor: pointer;
+            border: 1px #72C02C solid;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+
+        .number_list:active {
+            background-color: #72C02C;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+
+        /* footer  */
+        .box_footer {
+
+            background-color: #191919;
+        }
+
+        .footer_up {
+
+            display: flex;
+            padding: 40px 0;
+            margin: 15px;
+        }
+
+        @media screen and (max-width:767px) {
+
+            .footer_up {
+
+
+                flex-direction: column;
+            }
+        }
+
+        .footer_up h2 {
+            color: #F7F7F7;
+        }
+
+        .about {
+            flex: 1;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            margin-right: 20px;
+        }
+
+        .about a:hover {
+            text-decoration: underline;
+            color: #7B8484;
+        }
+
+        .boder {
+            border: #7B8484 1px solid;
+            width: 100px;
+            margin-bottom: 30px;
+        }
+
+        .text_about {
+            padding: 0px 30px 15px 0px;
+        }
+
+        .text_posts {
+            padding: 0px 30px 15px 0px;
+            border-bottom: #7B8484 1px solid;
+        }
+
+        .text_uselink {
+            border-bottom: #7B8484 1px solid;
+        }
+
+        .text_uselink_list {}
+
+        .text_uselink_list::after {
+            content: ">";
+            text-decoration: none;
+
+        }
+
+        .box_footer_down {
+            background-color: #000000;
+        }
+
+        .footer_down {
+            margin: 0 15px;
+            padding: 20px 0;
         }
     </style>
     <link rel="stylesheet"
@@ -243,13 +561,13 @@
                 <img src="../images/logo.png" alt="">
             </div>
             <nav>
-                <div class="nav_menu"> INTRO</div>
-                <div class="nav_menu"> HOME</div>
-                <div class="nav_menu"> PAGES</div>
-                <div class="nav_menu"> BLOG</div>
-                <div class="nav_menu"> FEATURES</div>
-                <div class="nav_menu"> SHORTCODES</div>
-                <div class="nav_menu"> DEMOS</div>
+                <div class="nav_menu"> <a href="#">INTRO </a></div>
+                <div class="nav_menu"> <a href="#">HOME</a></div>
+                <div class="nav_menu"> <a href="#">PAGES</a></div>
+                <div class="nav_menu"> <a href="#">BLOG</a></div>
+                <div class="nav_menu"><a href="#"> FEATURES</a></div>
+                <div class="nav_menu"> <a href="#">SHORTCODES</a></div>
+                <div class="nav_menu"> <a href="#">DEMOS</a></div>
             </nav>
             <div class="purchase">
                 <div class="button_purchase">
@@ -260,7 +578,13 @@
     </header>
 
     <!-- content -->
+    <!-- button setting  -->
+    <div class="setting">
+        <a href="#"> <span class="iconify" data-icon="ic:outline-settings-suggest"
+                style="font-size: 50px; color: #72C02C;"></span></a>
+    </div>
     <section class="container">
+
         <!-- banner  -->
         <section class="banner">
             <div class="row">
@@ -282,67 +606,507 @@
             <!-- left column -->
             <div class="inner_left">
                 <!-- List link  -->
-                <div>
-                    <div>
-                        <h3> LINKS</h3>
-                        <div class="list_link">
+                <div class="link">
 
-                            <a href="#">
-                                <p class="ul_list_link">
-                                    People
-                                </p>
-                            </a>
-                            <a href="#">
-                                <p class="ul_list_link">
-                                    News Publications
-                                </p>
-                            </a>
-                            <a href="#">
-                                <p class="ul_list_link">
-                                    Marketing & IT
-                                </p>
-                            </a>
-                            <a href="#">
-                                <p class="ul_list_link">
-                                    Business Strategy
-                                </p>
-                            </a>
-                            <a href="#">
-                                <p class="ul_list_link">
-                                    Untold Stories
-                                </p>
-                            </a>
+                    <h3> LINKS</h3>
+                    <div class="list_link">
 
+                        <a href="#">
+                            <p class="ul_list_link">
+                                People
+                            </p>
+                        </a>
+                        <a href="#">
+                            <p class="ul_list_link">
+                                News Publications
+                            </p>
+                        </a>
+                        <a href="#">
+                            <p class="ul_list_link">
+                                Marketing & IT
+                            </p>
+                        </a>
+                        <a href="#">
+                            <p class="ul_list_link">
+                                Business Strategy
+                            </p>
+                        </a>
+                        <a href="#">
+                            <p class="ul_list_link">
+                                Untold Stories
+                            </p>
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- Publications  -->
+                <div class="pub">
+                    <div class="publications">
+                        <h3> Publications</h3>
+                        <div class="list_pub">
+                            <div class="avatar_pub">
+                                <img src="../images/a3.jpg">
+                            </div>
+                            <div class="name_pub">
+                                <h4> Htmlstream</h4>
+                                <div>
+                                    <p>This is where we sit down, grab a cup of coffee and dial in the details.</p>
+                                </div>
+                                <div class="text_pub">
+                                    <div class="previous">
+                                        <a href="#">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pub 2  -->
+                    <div class="publications">
+                        <h3> Publications</h3>
+                        <div class="list_pub">
+                            <div class="avatar_pub">
+                                <img src="../images/a3.jpg">
+                            </div>
+                            <div class="name_pub">
+                                <h4> Htmlstream</h4>
+                                <div>
+                                    <p>This is where we sit down, grab a cup of coffee and dial in the details.</p>
+                                </div>
+                                <div class="text_pub">
+                                    <div class="previous">
+                                        <a href="#">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- pub 3  -->
+                    <div class="publications">
+                        <h3> Pixeel</h3>
+                        <div class="list_pub">
+                            <div class="avatar_pub">
+                                <img src="../images/a3.jpg">
+                            </div>
+                            <div class="name_pub">
+                                <h4> WrapBootstrap</h4>
+                                <div>
+                                    <p>This is where we sit down, grab a cup of coffee and dial in the details.</p>
+                                </div>
+                                <div class="text_pub">
+                                    <div class="previous">
+                                        <a href="#">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- tag  -->
+                <div class="tags">
+                    <div class="publications">
+                        <h3> Tags</h3>
+                        <div class="text_pub">
+                            <div class=" tagsname">
+                                <span>Design</span>
+                            </div>
+                            <div class="tagsname">
+                                <span>Art</span>
+                            </div>
+                            <div class=" tagsname">
+                                <span>Design</span>
+                            </div>
+                            <div class="tagsname">
+                                <span>Art</span>
+                            </div>
+                            <div class="tagsname">
+                                <span>Front End Development</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
             <!-- right column  -->
             <div class="inner_right">
-                <div class="news">
-                    <div class="news_day">
-                        <p>1 JUNE 2017</p>
-                    </div>
-                    <div class="news_title">
-                        <h2>A UX strategy for the Ultimate Product Launch</h2>
-                    </div>
-                    <div class="news_content">
-                        <p>Product teams working with low access to users and a long time to market, usually enterprise
-                            level services and the
-                            like, need to make the most of their time, to compensate for access to users.</p>
-                        <span>Read more...</span>
-                    </div>
-                    <div class="news_user">
-                        <div class="news_name">
-                            <div class="avatar">
 
+                <div class="list_news">
+                    <!-- news1  -->
+                    <div class="news">
+                        <div class="news_day">
+                            <p>1 JUNE 2017</p>
+                        </div>
+                        <div class="news_title">
+                            <h2>A UX strategy for the Ultimate Product Launch</h2>
+                        </div>
+                        <div class="news_content">
+                            <p>Product teams working with low access to users and a long time to market, usually
+                                enterprise
+                                level services and the
+                                like, need to make the most of their time, to compensate for access to users.</p>
+
+                        </div>
+                        <div class="readmore">
+                            <a href="#"><span style="color:#72C02C;"> Read more...</span></a>
+                        </div>
+                        <div class="news_user">
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <img src="../images/a1.png" alt="">
+
+                                </div>
+                                <div class="name">
+                                    Alex Teseira
+                                </div>
                             </div>
-                            <div class="name">
-
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="la:comments"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Comments
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="codicon:heart"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Likes
+                                </div>
                             </div>
                         </div>
-                        <div class="news_name"> abc</div>
-                        <div class="news_name"> abc</div>
+                    </div>
+
+                    <!-- news2 -->
+                    <div class="news">
+                        <div class="news_day">
+                            <p>31 MAY 2017</p>
+                        </div>
+                        <div class="news_title">
+                            <h2>Announcing a free plan for small teams</h2>
+                        </div>
+                        <div class="news_content">
+                            <p>At Wake, our mission has always been focused on bringing openness and transparency to the
+                                design process. We’ve always
+                                believed that by providing a space where designers can share ongoing work not only
+                                empowers
+                                them to make better
+                                products.</p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#"><span style="color:#72C02C;"> Read more...</span></a>
+                        </div>
+                        <div class="news_user">
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <img src="../images/a2.jpg" alt="">
+
+                                </div>
+                                <div class="name">
+                                    Sara Kajevnikova
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="la:comments"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Comments
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="codicon:heart"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Likes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- news3 -->
+                    <div class="news">
+                        <div class="news_day">
+                            <p>31 MAY 2017</p>
+                        </div>
+                        <div class="news_title">
+                            <h2>Announcing a free plan for small teams</h2>
+                        </div>
+                        <div class="news_content">
+                            <p>At Wake, our mission has always been focused on bringing openness and transparency to the
+                                design process. We’ve always
+                                believed that by providing a space where designers can share ongoing work not only
+                                empowers
+                                them to make better
+                                products.</p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#"><span style="color:#72C02C;"> Read more...</span></a>
+                        </div>
+                        <div class="news_user">
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <img src="../images/a2.jpg" alt="">
+
+                                </div>
+                                <div class="name">
+                                    Sara Kajevnikova
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="la:comments"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Comments
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="codicon:heart"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Likes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- news 4 -->
+                    <div class="news">
+                        <div class="news_day">
+                            <p>31 MAY 2017</p>
+                        </div>
+                        <div class="news_title">
+                            <h2>Announcing a free plan for small teams</h2>
+                        </div>
+                        <div class="news_content">
+                            <p>At Wake, our mission has always been focused on bringing openness and transparency to the
+                                design process. We’ve always
+                                believed that by providing a space where designers can share ongoing work not only
+                                empowers
+                                them to make better
+                                products.</p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#"><span style="color:#72C02C;"> Read more...</span></a>
+                        </div>
+                        <div class="news_user">
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <img src="../images/a2.jpg" alt="">
+
+                                </div>
+                                <div class="name">
+                                    Sara Kajevnikova
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="la:comments"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Comments
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="codicon:heart"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Likes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- news 5 -->
+                    <div class="news">
+                        <div class="news_day">
+                            <p>31 MAY 2017</p>
+                        </div>
+                        <div class="news_title">
+                            <h2>Announcing a free plan for small teams</h2>
+                        </div>
+                        <div class="news_content">
+                            <p>At Wake, our mission has always been focused on bringing openness and transparency to the
+                                design process. We’ve always
+                                believed that by providing a space where designers can share ongoing work not only
+                                empowers
+                                them to make better
+                                products.</p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#"><span style="color:#72C02C;"> Read more...</span></a>
+                        </div>
+                        <div class="news_user">
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <img src="../images/a2.jpg" alt="">
+
+                                </div>
+                                <div class="name">
+                                    Sara Kajevnikova
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="la:comments"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Comments
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="codicon:heart"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Likes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- news 6 -->
+                    <div class="news">
+                        <div class="news_day">
+                            <p>31 MAY 2017</p>
+                        </div>
+                        <div class="news_title">
+                            <h2>Announcing a free plan for small teams</h2>
+                        </div>
+                        <div class="news_content">
+                            <p>At Wake, our mission has always been focused on bringing openness and transparency to the
+                                design process. We’ve always
+                                believed that by providing a space where designers can share ongoing work not only
+                                empowers
+                                them to make better
+                                products.</p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#"><span style="color:#72C02C;"> Read more...</span></a>
+                        </div>
+                        <div class="news_user">
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <img src="../images/a2.jpg" alt="">
+
+                                </div>
+                                <div class="name">
+                                    Sara Kajevnikova
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="la:comments"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Comments
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="codicon:heart"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Likes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- news 7 -->
+                    <div class="news">
+                        <div class="news_day">
+                            <p>31 MAY 2017</p>
+                        </div>
+                        <div class="news_title">
+                            <h2>Announcing a free plan for small teams</h2>
+                        </div>
+                        <div class="news_content">
+                            <p>At Wake, our mission has always been focused on bringing openness and transparency to the
+                                design process. We’ve always
+                                believed that by providing a space where designers can share ongoing work not only
+                                empowers
+                                them to make better
+                                products.</p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#"><span style="color:#72C02C;"> Read more...</span></a>
+                        </div>
+                        <div class="news_user">
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <img src="../images/a2.jpg" alt="">
+
+                                </div>
+                                <div class="name">
+                                    Sara Kajevnikova
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="la:comments"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Comments
+                                </div>
+                            </div>
+                            <div class="news_name">
+                                <div class="avatar">
+                                    <span class="iconify" data-icon="codicon:heart"
+                                        style="color: #7B8484; font-size: 20px;"></span>
+                                </div>
+                                <div class="name">
+                                    10 Likes
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav_page">
+                    <div class="text text_start">
+                        <div class="previous">
+                            <a href="#">Previous</a>
+                        </div>
+
+                    </div>
+                    <div class="numbers">
+                        <div class=number_list>
+                            <a href="#"> 1</a>
+                        </div>
+                        <div class=number_list>
+                            <a href="#"> 2</a>
+                        </div>
+                        <div class=number_list>
+                            <a href="#"> 3</a>
+                        </div>
+                    </div>
+                    <div class="text text_end">
+                        <div class="previous">
+                            <a href="#">
+                                Next
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -354,6 +1118,120 @@
     </section>
     <!-- footer  -->
     <footer>
+        <div class="box_footer">
+            <div class="footer_up">
+                <div class="about">
+
+                    <h2>
+                        ABOUT US
+                    </h2>
+                    <div class="boder"></div>
+                    <div class="text_about">
+                        <p>
+                            About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero
+                            tincidunt
+                            sodales.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="about">
+                    <h2>
+                        LATEST POSTS
+                    </h2>
+                    <div class="boder"></div>
+                    <div class="text_posts">
+                        <a href="#">
+                            <h3>
+                                Incredible template
+                            </h3>
+                        </a>
+                        <span>May 8, 2017</span>
+                    </div>
+                    <div class="text_posts">
+                        <a href="#">
+                            <h3>
+                                New features
+                            </h3>
+                        </a>
+                        <span>May 8, 2017</span>
+                    </div>
+                    <div class="text_posts">
+                        <a href="#">
+                            <h3>
+                                New terms and conditions
+                            </h3>
+                        </a>
+                        <span>May 8, 2017</span>
+                    </div>
+                </div>
+                <div class="about">
+                    <h2>
+                        USEFUL LINKS
+                    </h2>
+                    <div class="boder"></div>
+                    <div class="text_uselink">
+
+                        <a href="#">
+                            <h3 class="text_uselink_list">
+                                About Us
+                            </h3>
+                        </a>
+
+                    </div>
+                    <div class="text_uselink">
+
+                        <a href="#">
+                            <h3 class="text_uselink_list">
+                                Portfolio
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="text_uselink">
+
+                        <a href="#">
+                            <h3 class="text_uselink_list">
+                                Our Services
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="text_uselink">
+
+                        <a href="#">
+                            <h3 class="text_uselink_list">
+                                Latest Jobs
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="text_uselink">
+
+                        <a href="#">
+                            <h3 class="text_uselink_list">
+                                Contact Us
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="about">
+                    <h2>
+                        OUR CONTACTS
+                    </h2>
+                    <div class="text_about">
+                        <p>
+                            About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero
+                            tincidunt
+                            sodales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="box_footer_down">
+                <div class="footer_down">
+                    <p> 2020 © All Rights Reserved.
+                        Privacy Policy | Terms of Use | License | Support</p>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
