@@ -435,7 +435,6 @@
             border-radius: 20px;
             padding: 5px 15px;
             margin: 5px;
-
         }
 
         .tagsname:hover {
@@ -450,7 +449,6 @@
             justify-content: space-between;
             align-content: center;
             align-items: center;
-
         }
 
         .number_list {
@@ -462,7 +460,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
         }
 
         .number_list:hover {
@@ -542,7 +539,6 @@
         .text_uselink_list::after {
             content: ">";
             text-decoration: none;
-
         }
 
         .box_footer_down {
