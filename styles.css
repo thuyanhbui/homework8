@@ -331,9 +331,24 @@
         .news_name {
             flex: 1;
             display: flex;
+            cursor: pointer;
 
         }
-
+        .new_comment{
+            flex: 1;
+            display: flex;
+            border: 0px;
+            background-color:white;
+            border-radius: 30px;
+            /* padding: 1px; */
+            margin: 5px;
+            cursor: pointer;
+        }
+        .new_comment:hover{
+            background-color:#7B8484 ;
+            color: white;
+            border-radius: 30px;
+        }
         .avatar {
             flex: 2;
             display: flex;
