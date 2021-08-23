@@ -331,9 +331,24 @@
         .news_name {
             flex: 1;
             display: flex;
+            cursor: pointer;
 
         }
-
+        .new_comment{
+            flex: 1;
+            display: flex;
+            border: 0px;
+            background-color:white;
+            border-radius: 30px;
+            /* padding: 1px; */
+            margin: 5px;
+            cursor: pointer;
+        }
+        .new_comment:hover{
+            background-color:#7B8484 ;
+            color: white;
+            border-radius: 30px;
+        }
         .avatar {
             flex: 2;
             display: flex;
@@ -420,7 +435,6 @@
             border-radius: 20px;
             padding: 5px 15px;
             margin: 5px;
-
         }
 
         .tagsname:hover {
@@ -435,7 +449,6 @@
             justify-content: space-between;
             align-content: center;
             align-items: center;
-
         }
 
         .number_list {
@@ -447,7 +460,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
         }
 
         .number_list:hover {
@@ -527,7 +539,6 @@
         .text_uselink_list::after {
             content: ">";
             text-decoration: none;
-
         }
 
         .box_footer_down {
