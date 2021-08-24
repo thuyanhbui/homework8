@@ -336,7 +336,7 @@
 
         }
         .new_comment{
-            flex: 1;
+           
             display: flex;
             border: 0px;
             background-color: white;
@@ -351,7 +351,7 @@
              margin: 1px 15px 1px 15px;
         }
         .avatar {
-            flex: 2;
+            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -367,11 +367,11 @@
 
 
         .name {
-            flex: 8;
-
+           
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            padding: 10px;
 
         }
 
