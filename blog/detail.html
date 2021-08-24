@@ -6,10 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog minimal 1 left sidebar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet"
         href="//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik">
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+
+    <style>
+        .detail {
+
+            padding: 50px 100px;
+
+        }
+
+        .inner_detail {
+            padding: 15px;
+
+        }
+
+        .inner_detail img {
+            width: 100%;
+
+        }
+
+        .detail_content {}
+
+        .name_detail {
+
+            display: flex;
+            justify-content: flex-start;
+
+        }
+
+        .ava_detail {
+            flex: 0.5;
+            display: flex;
+            padding-top: 15px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        .ava_detail>img {
+
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+
+        .ava_name {
+            flex: 9;
+            display: flex;
+            padding-top: 15px;
+            padding-right: 10px;
+            padding-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +71,7 @@
     <header>
         <div class="header_box">
             <div class="logo">
-                <img src="images/logo.png" alt="">
+                <img src="/images/blogs/logo.png" alt="">
             </div>
             <nav>
                 <div class="nav_menu"> <a href="#">INTRO </a></div>
@@ -55,7 +109,77 @@
         </div>
     </section>
 
+    <!-- content  -->
+    <Section class="detail">
+        <div class="inner_detail">
 
+            <div class="name_detail">
+                <div class="ava_detail">
+                    <img src="/images/blogs_detail/img1.jpg">
+                </div>
+                <div class="ava_name">
+                    <p> <a href=#>Alex Teseira</a>
+                        <br />
+
+                        May 31 2017 - 5 min read
+                    </p>
+                </div>
+            </div>
+
+            <img src="/images/blogs_detail/img1.jpg">
+            <div class="detail_content">
+
+                <div class="news_title">
+                    <h2>A UX strategy for the Ultimate Product Launch</h2>
+                </div>
+                <div class="news_content">
+                    <p>Product teams working with low access to users and a long time to market, usually
+                        enterprise
+                        level services and the
+                        like, need to make the most of their time, to compensate for access to users.</p>
+
+                </div>
+                <div class="readmore">
+                    <a href="#"><span style="color:#72C02C;"> Read more...</span></a>
+                </div>
+            </div>
+            <div class="news_user">
+                <div class="news_name">
+                    <div class="new_comment">
+                        <div class="avatar">
+                            <span class="iconify" data-icon="codicon:heart"
+                                style="color: #7B8484; font-size: 20px;"></span>
+                        </div>
+                        <div class="name">
+                            10 Likes
+                        </div>
+                    </div>
+                </div>
+                <div class="news_name">
+                    <div class="new_comment">
+                        <div class="avatar">
+                            <span class="iconify" data-icon="la:comments"
+                                style="color: #7B8484; font-size: 20px;"></span>
+                        </div>
+                        <div class="name">
+                            10 Comments
+                        </div>
+                    </div>
+                </div>
+                <div class="news_name">
+                    <div class="new_comment">
+                        <div class="avatar">
+                            <span class="iconify" data-icon="bi:bookmark"
+                                style="color: #7B8484; font-size: 20px;"></span>
+                        </div>
+                        <div class="name">
+                            Bookmarks
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </Section>
 
 
 
